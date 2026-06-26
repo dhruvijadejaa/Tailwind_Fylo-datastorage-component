@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-document.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Fylo data storage component</title>
 
@@ -15,10 +15,14 @@
   </style>
 </head>
 <body>
-  <div class="w-full h-screen flex items-center justify-center">
-    <main class="flex gap-3">
-      <div class="w-[400px] h-[200px] bg-[var(--blue-850)] 
-      rounded-2xl rounded-tr-[5rem] p-8 ">
+  <div class=" relative w-full h-screen flex items-center justify-center 
+  bg-[var(--blue-950)]">
+    <img src="./images/bg-desktop.png" alt=""
+    class="absolute bottom-0">
+    
+    <main class="flex gap-3 items-end xs:flex xs:flex-col">
+      <div class="z-10 w-[400px] h-[200px] bg-[var(--blue-850)] 
+      rounded-2xl rounded-tr-[7rem] p-8 ">
         <div class="mt-1.5 mb-8">
           <img src="./images/logo.svg" alt="">
         </div>
@@ -36,25 +40,35 @@
         </div>
       </div>
 
-      <div class="w-[200px] h-[100px] bg-[var(--blue-850)]">
-        <p>You’ve used 815 GB of your storage</p>  
-        <div class="bg-[var(--blue-950)] rounded-full w-[200px]">ok</div>
-        <p>185 GB Left</p>
+      <div class="relative w-[600px] h-[150px] bg-[var(--blue-850)] rounded-2xl p-7 text-white">
+        <p class="mb-3">You’ve used 815 GB of your storage</p>  
+        <div class="bg-[var(--blue-950)] flex items-center rounded-full w-[550px] h-[1rem]">
+          <div class= "bg-gradient-to-r from-red-500 to-yellow-200 rounded-full 
+          w-[350px] h-[0.8rem]" >
+        <div class="bg-white h-3 w-3 rounded-[50%] ml-[340px]"></div>
+        </div>
+        </div>
+        <div class="flex justify-between font-extralight">
+          <p>0 GB</p>
+          <p>1000 GB</p>
+        </div>
+        
+        <div class="absolute -top-7 right-8">
+
+          <div class="relative w-40 h-17 bg-white
+          rounded-2xl rounded-br-none
+          text-black font-extrabold text-center pt-5 text-xl">185 <span class="font-extralight text-gray-400">GB LEFT</span></div>
+          
+          <div class="absolute w-0 h-0 
+          -bottom-5 right-0 border-t-25 border-l-25 border-l-transparent
+          border-t-white"></div>
+
+        </div>
+
       <div>
     </main>
   </div>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
   <source src="./main.js" type="">
 </body>
 </html>
